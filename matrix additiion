@@ -66,3 +66,58 @@ public class Add
 		}
 	}
 }
+
+OUTPUT
+
+ubuntu@l6sys57:~/SCS1051123$ javac Add.java
+ubuntu@l6sys57:~/SCS1051123$ java Add
+FIRST MATRIX
+Enter number of rows in first matrix : 
+3
+Enter number of columns in first matrix : 
+3
+Enter the elements: 
+
+1
+2
+3
+3
+2
+1
+1
+2
+3
+---FIRST MATRIX RECORDED---
+
+SECOND MATRIX
+Enter number of rows in second matrix : 
+3
+Enter number of columns in second matrix : 
+3
+Enter the elements: 
+
+1
+2
+3
+6
+3
+2
+1
+0
+2
+---SECOND MATRIX RECORDED---
+
+ADDED MATRIX IS
+2
+4
+6
+
+9
+5
+3
+
+2
+2
+5
+
+
