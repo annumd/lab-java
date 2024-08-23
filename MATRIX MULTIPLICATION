@@ -1,0 +1,125 @@
+import java.util.*;
+public class Multi
+{
+	public static void main(String args [])
+	{
+		Scanner sc= new Scanner(System.in);
+		int i=0,j=0;
+		int [][] a= new int [20][20];
+		int [][] b= new int [20][20];
+		int [][] prod= new int [40][40];
+		
+		System.out.println("FIRST MATRIX");
+		System.out.println("Enter number of rows in first matrix : ");
+		int r1=sc.nextInt();
+		System.out.println("Enter number of columns in first matrix : ");
+		int c1=sc.nextInt();
+		//reads first matrix
+		System.out.println("Enter the elements: \n");
+		for(i=0;i<r1;i++)
+		{
+			for(j=0;j<c1;j++)
+			{
+				a[i][j]=sc.nextInt();
+			}
+		}
+		System.out.println("---FIRST MATRIX RECORDED---\n");
+		//reads second matrix
+		System.out.println("SECOND MATRIX");
+		System.out.println("Enter number of rows in second matrix : ");
+		int r2=sc.nextInt();
+		System.out.println("Enter number of columns in second matrix : ");
+		int c2=sc.nextInt();
+		if (c1 != r2) 
+		{
+           	 System.out.println("Matrix multiplication not possible: Number of columns in first matrix must be equal to number of rows in second 			matrix.");
+        	} 
+        	else
+        	{
+			System.out.println("Enter the elements: \n");
+			for(i=0;i<r2;i++)
+			{
+				for(j=0;j<c2;j++)
+				{
+					b[i][j]=sc.nextInt();
+				}
+			}	
+			System.out.println("---SECOND MATRIX RECORDED---\n");
+		
+			//calculates product
+			for(i=0;i<r1;i++)
+			{
+				for(j=0;j<c1;j++)
+				{
+					prod[i][j]=a[i][j]*b[i][j];
+				}
+			}
+			System.out.println("PRODUCT MATRIX IS");
+			for(i=0;i<r1;i++)
+			{
+				for(j=0;j<c1;j++)
+				{
+					System.out.print(prod[i][j]+ "\t");
+				}
+				System.out.println();
+			}
+		}
+	}
+}
+
+OUTPUT
+ubuntu@l6sys57:~/SCS1051123$ javac Multi.java
+ubuntu@l6sys57:~/SCS1051123$ java Multi
+FIRST MATRIX
+Enter number of rows in first matrix : 
+3
+Enter number of columns in first matrix : 
+2
+Enter the elements: 
+
+1
+2
+3
+4
+5
+2
+---FIRST MATRIX RECORDED---
+
+SECOND MATRIX
+Enter number of rows in second matrix : 
+2
+Enter number of columns in second matrix : 
+3
+Enter the elements: 
+
+1
+4
+3
+2
+5
+6
+---SECOND MATRIX RECORDED---
+
+PRODUCT MATRIX IS
+1	8	
+6	20	
+0	0	
+ubuntu@l6sys57:~/SCS1051123$ java Multi
+FIRST MATRIX
+Enter number of rows in first matrix : 
+1
+Enter number of columns in first matrix : 
+3
+Enter the elements: 
+
+1
+2
+3
+---FIRST MATRIX RECORDED---
+
+SECOND MATRIX
+Enter number of rows in second matrix : 
+2
+Enter number of columns in second matrix : 
+2
+Matrix multiplication not possible: Number of columns in first matrix must be equal to number of rows in second 			matrix.
