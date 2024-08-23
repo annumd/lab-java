@@ -4,7 +4,7 @@ public class Add
 	public static void main(String args [])
 	{
 		Scanner sc= new Scanner(System.in);
-		int i,j;
+		int i=0,j=0;
 		int [][] a= new int [20][20];
 		int [][] b= new int [20][20];
 		int [][] sum= new int [40][40];
@@ -29,8 +29,9 @@ public class Add
 		{
 			for(j=0;j<=c1;j++)
 			{
-				System.out.println(""+a[i][j]);
+				System.out.println("%5d"+a[i][j]);
 			}
+			System.out.println();
 		}
 		//reads second matrix
 		System.out.println("-SECOND MATRIX-");
@@ -53,7 +54,9 @@ public class Add
 			for(j=0;j<c2;j++)
 			{
 			 	
-				System.out.println(""+b[i][j]);
+				System.out.println("%5d"+b[i][j]);
 			}
+			System.out.println();
 		}
+	}
 }
