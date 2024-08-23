@@ -9,7 +9,7 @@ public class Add
 		int [][] b= new int [20][20];
 		int [][] sum= new int [40][40];
 		
-		System.out.println("-FIRST MATRIX-");
+		System.out.println("FIRST MATRIX");
 		System.out.println("Enter number of rows in first matrix : ");
 		int r1=sc.nextInt();
 		System.out.println("Enter number of columns in first matrix : ");
@@ -23,18 +23,9 @@ public class Add
 				a[i][j]=sc.nextInt();
 			}
 		}
-		//prints first matrix
-		System.out.println("Matrix 1: /n");
-		for(i=0;i<=r1;i++)
-		{
-			for(j=0;j<=c1;j++)
-			{
-				System.out.println("%5d"+a[i][j]);
-			}
-			System.out.println();
-		}
+		System.out.println("---FIRST MATRIX RECORDED---\n");
 		//reads second matrix
-		System.out.println("-SECOND MATRIX-");
+		System.out.println("SECOND MATRIX");
 		System.out.println("Enter number of rows in second matrix : ");
 		int r2=sc.nextInt();
 		System.out.println("Enter number of columns in second matrix : ");
@@ -47,16 +38,35 @@ public class Add
 				b[i][j]=sc.nextInt();
 			}
 		}
-		//prints second matrix
-		System.out.println("Matrix 2: \n");
-		for(i=0;i<r2;i++)
+		System.out.println("---SECOND MATRIX RECORDED---\n");
+		//calculates sum
+		for(i=0;i<r1;i++)
 		{
-			for(j=0;j<c2;j++)
+			for(j=0;j<c1;j++)
 			{
-			 	
-				System.out.println("%5d"+b[i][j]);
+				sum[i][j]=a[i][j]+b[i][j];
+			}
+		}
+		System.out.println("ADDED MATRIX IS");
+		for(i=0;i<r1;i++)
+		{
+			for(j=0;j<c1;j++)
+			{
+				System.out.println(""+sum[i][j]);
 			}
 			System.out.println();
 		}
+		if(r1!=r2)
+		{
+			System.out.println("addition not possible");
+			
+		}
+		
+		else if( c1!=c2)
+		{
+			System.out.println("addition not possible");
+			
+		}
 	}
 }
+
