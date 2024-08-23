@@ -59,7 +59,7 @@ public class Add
 			{
 				for(j=0;j<c1;j++)
 				{
-					System.out.println(""+sum[i][j]);
+					System.out.print(sum[i][j]+ "\t");
 				}
 				System.out.println();
 			}
@@ -69,7 +69,6 @@ public class Add
 
 OUTPUT
 
-ubuntu@l6sys57:~/SCS1051123$ javac Add.java
 ubuntu@l6sys57:~/SCS1051123$ java Add
 FIRST MATRIX
 Enter number of rows in first matrix : 
@@ -78,15 +77,15 @@ Enter number of columns in first matrix :
 3
 Enter the elements: 
 
-1
+10
+10
+20
+10
+5
+0 
+12
 2
-3
-3
-2
-1
-1
-2
-3
+9
 ---FIRST MATRIX RECORDED---
 
 SECOND MATRIX
@@ -96,28 +95,47 @@ Enter number of columns in second matrix :
 3
 Enter the elements: 
 
+10
+20
+30
+1
+1
 1
 2
-3
-6
-3
-2
-1
+35 
 0
-2
 ---SECOND MATRIX RECORDED---
 
 ADDED MATRIX IS
-2
-4
-6
+20	30	50	
+11	6	1	
+14	37	9	
 
-9
-5
+ubuntu@l6sys57:~/SCS1051123$ java Add
+FIRST MATRIX
+Enter number of rows in first matrix : 
+2
+Enter number of columns in first matrix : 
+2
+Enter the elements: 
+
+1
+1
+1
+1
+---FIRST MATRIX RECORDED---
+
+SECOND MATRIX
+Enter number of rows in second matrix : 
+1
+Enter number of columns in second matrix : 
 3
+Enter the elements: 
 
-2
-2
-5
+1
+1
+1
+---SECOND MATRIX RECORDED---
 
+Addition not possible: Matrices must be of the same dimensions.
 
