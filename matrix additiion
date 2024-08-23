@@ -1,0 +1,59 @@
+import java.util.*;
+public class Add
+{
+	public static void main(String args [])
+	{
+		Scanner sc= new Scanner(System.in);
+		int i,j;
+		int [][] a= new int [20][20];
+		int [][] b= new int [20][20];
+		int [][] sum= new int [40][40];
+		
+		System.out.println("-FIRST MATRIX-");
+		System.out.println("Enter number of rows in first matrix : ");
+		int r1=sc.nextInt();
+		System.out.println("Enter number of columns in first matrix : ");
+		int c1=sc.nextInt();
+		//reads first matrix
+		System.out.println("Enter the elements: \n");
+		for(i=0;i<r1;i++)
+		{
+			for(j=0;j<c1;j++)
+			{
+				a[i][j]=sc.nextInt();
+			}
+		}
+		//prints first matrix
+		System.out.println("Matrix 1: /n");
+		for(i=0;i<=r1;i++)
+		{
+			for(j=0;j<=c1;j++)
+			{
+				System.out.println(""+a[i][j]);
+			}
+		}
+		//reads second matrix
+		System.out.println("-SECOND MATRIX-");
+		System.out.println("Enter number of rows in second matrix : ");
+		int r2=sc.nextInt();
+		System.out.println("Enter number of columns in second matrix : ");
+		int c2=sc.nextInt();
+		System.out.println("Enter the elements: \n");
+		for(i=0;i<=r2;i++)
+		{
+			for(j=0;j<=c2;j++)
+			{
+				b[i][j]=sc.nextInt();
+			}
+		}
+		//prints second matrix
+		System.out.println("Matrix 2: \n");
+		for(i=0;i<r2;i++)
+		{
+			for(j=0;j<c2;j++)
+			{
+			 	
+				System.out.println(""+b[i][j]);
+			}
+		}
+}
