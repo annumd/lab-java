@@ -31,42 +31,38 @@ public class Add
 		System.out.println("Enter number of columns in second matrix : ");
 		int c2=sc.nextInt();
 		System.out.println("Enter the elements: \n");
-		for(i=0;i<=r2;i++)
+		for(i=0;i<r2;i++)
 		{
-			for(j=0;j<=c2;j++)
+			for(j=0;j<c2;j++)
 			{
 				b[i][j]=sc.nextInt();
 			}
 		}
 		System.out.println("---SECOND MATRIX RECORDED---\n");
-		//calculates sum
-		for(i=0;i<r1;i++)
-		{
-			for(j=0;j<c1;j++)
-			{
-				sum[i][j]=a[i][j]+b[i][j];
-			}
-		}
-		System.out.println("ADDED MATRIX IS");
-		for(i=0;i<r1;i++)
-		{
-			for(j=0;j<c1;j++)
-			{
-				System.out.println(""+sum[i][j]);
-			}
-			System.out.println();
-		}
-		if(r1!=r2)
-		{
-			System.out.println("addition not possible");
-			
-		}
 		
-		else if( c1!=c2)
+		if (r1 != r2 || c1 != c2) 
 		{
-			System.out.println("addition not possible");
-			
+           		 System.out.println("Addition not possible: Matrices must be of the same dimensions.");
+        	} 
+        	else
+        	{
+			//calculates sum
+			for(i=0;i<r1;i++)
+			{
+				for(j=0;j<c1;j++)
+				{
+					sum[i][j]=a[i][j]+b[i][j];
+				}
+			}
+			System.out.println("ADDED MATRIX IS");
+			for(i=0;i<r1;i++)
+			{
+				for(j=0;j<c1;j++)
+				{
+					System.out.println(""+sum[i][j]);
+				}
+				System.out.println();
+			}
 		}
 	}
 }
-
